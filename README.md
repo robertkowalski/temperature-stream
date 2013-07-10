@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/robertkowalski/temperature-stream.png?branch=implement/transform)](https://travis-ci.org/robertkowalski/temperature-stream)
+[![Build Status](https://travis-ci.org/robertkowalski/temperature-stream.png?branch=master)](https://travis-ci.org/robertkowalski/temperature-stream)
 [![Dependency Status](https://gemnasium.com/robertkowalski/temperature-stream.png)](https://gemnasium.com/robertkowalski/temperature-stream)
 
 #temperature-stream
