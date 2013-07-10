@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/robertkowalski/temperature-stream.png?branch=implement/transform)](https://travis-ci.org/robertkowalski/temperature-stream)
+[![Dependency Status](https://gemnasium.com/robertkowalski/temperature-stream.png)](https://gemnasium.com/robertkowalski/temperature-stream)
+
 #temperature-stream
 
 Temperature from a Raspberry Pi GPIO as a stream
