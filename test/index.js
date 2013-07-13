@@ -48,6 +48,20 @@ describe("module", function () {
         .pipe(target)
     })
   })
+  it("is able to add things to the end", function (done) {
+    mkdir(tempdir, function (err) {
+      var target = fs.createWriteStream(tempdir + "/temp3.txt")
+      target.on("close", function () {
+        var res = fs.readFileSync(tempdir + "/temp3.txt")
+        assert.equal(res.toString(), "22750 ente")
+        done()
+      })
+
+      fs.createReadStream(__dirname + "/fixtures/temp.txt")
+        .pipe(tsr(" ente"))
+        .pipe(target)
+    })
+  })
   it("returns null for other files", function (done) {
     mkdir(tempdir, function (err) {
       var target = fs.createWriteStream(tempdir + "/notemp.txt")

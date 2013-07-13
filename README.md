@@ -17,6 +17,17 @@ fs.createReadStream("/sys/bus/w1/devices/10-000802824e58/w1-slave")
     .pipe(target)
 ```
 
+Adding a semicolon to the end of the resulting data:
+```javascript
+var fs = require("fs")
+var tsr = require("temperature-stream")
+
+var target = fs.createWriteStream(tempdir + "/temp.txt")
+fs.createReadStream("/sys/bus/w1/devices/10-000802824e58/w1-slave")
+    .pipe(tsr(";"))
+    .pipe(target) // 22750;
+```
+
 ##Input / Output
 
 Input:
