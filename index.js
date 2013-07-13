@@ -2,10 +2,10 @@ var Transform = require('stream').Transform || require('readable-stream').Transf
 
 module.exports = tsr
 
-var buf = new Buffer(5)
-var capture = false
-var j = 0
 function tsr () {
+  var buf = new Buffer(5)
+  var capture = false
+  var j = 0
   var stream = new Transform()
 
   stream._transform = function (chunk, enc, cb) {

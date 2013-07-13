@@ -34,6 +34,20 @@ describe("module", function () {
         .pipe(target)
     })
   })
+  it("works a second time", function (done) {
+    mkdir(tempdir, function (err) {
+      var target = fs.createWriteStream(tempdir + "/temp2.txt")
+      target.on("close", function () {
+        var res = fs.readFileSync(tempdir + "/temp2.txt")
+        assert.equal(res.toString(), "22750")
+        done()
+      })
+
+      fs.createReadStream(__dirname + "/fixtures/temp.txt")
+        .pipe(tsr())
+        .pipe(target)
+    })
+  })
   it("returns null for other files", function (done) {
     mkdir(tempdir, function (err) {
       var target = fs.createWriteStream(tempdir + "/notemp.txt")
