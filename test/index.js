@@ -90,4 +90,18 @@ describe("module", function () {
         .pipe(target)
     })
   })
+  it("works with no additional characters behind the temperature", function (done) {
+    mkdir(tempdir, function (err) {
+      var target = fs.createWriteStream(tempdir + "/temp_nonewline.txt")
+      target.on("close", function () {
+        var res = fs.readFileSync(tempdir + "/temp_nonewline.txt")
+        assert.equal(res.toString(), "22750")
+        done()
+      })
+
+      fs.createReadStream(__dirname + "/fixtures/temp_nonewline.txt")
+        .pipe(tsr())
+        .pipe(target)
+    })
+  })
 })

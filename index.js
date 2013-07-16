@@ -17,12 +17,12 @@ function tsr (s) {
 
     // search for 't=', slice out temp
     for (; i < chunk.length; i++) {
-      if (j === 5)
-        stream.push(buf)
       if (capture) {
         buf[j] = chunk[i]
         j++
       }
+      if (j === 5)
+        stream.push(buf)
       if (chunk[i] === 116) // t
         seenT = true
       else if (seenT && chunk[i] === 61) // =
