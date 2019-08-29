@@ -6,9 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {
-    "readable-stream": "~1.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mkdirp": "^0.5.1",
     "mocha": "^6.2.0",
