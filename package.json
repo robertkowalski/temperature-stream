@@ -4,15 +4,16 @@
   "description": "Temperature values as a stream",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha"
   },
   "dependencies": {
     "readable-stream": "~1.0.2"
   },
   "devDependencies": {
-    "mocha": "~1.9",
-    "rimraf": "2.1.4",
-    "mkdirp": "~0.3.5"
+    "mkdirp": "^0.5.1",
+    "mocha": "^6.2.0",
+    "rimraf": "^3.0.0",
+    "standard": "^14.1.0"
   },
   "keywords": [
     "raspberry",
