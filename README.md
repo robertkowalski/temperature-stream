@@ -2,7 +2,9 @@
 
 # temperature-stream
 
-Temperature from a Raspberry Pi GPIO as a stream
+Temperature from a Raspberry Pi GPIO as a stream.
+
+Supports `DS18B20` sensors.
 
 ## Usage
 
