@@ -17,6 +17,7 @@ fs.createReadStream("/sys/bus/w1/devices/10-000802824e58/w1-slave")
 ```
 
 Adding a semicolon to the end of the resulting data:
+
 ```js
 var fs = require("fs")
 var tsr = require("temperature-stream")

@@ -1,15 +1,17 @@
+'use strict'
+
 var Transform = require('stream').Transform || require('readable-stream').Transform
 
 module.exports = tsr
 
 function tsr (s) {
-  var buf = new Buffer(5)
+  var buf = Buffer.allocUnsafe(5)
   var capture = false
   var j = 0
   var stream = new Transform()
 
   if (s)
-    s = new Buffer(s, "utf8")
+    s = new Buffer.from(s, "utf8")
 
   stream._transform = function (chunk, enc, cb) {
     var res = null
