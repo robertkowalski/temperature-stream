@@ -26,8 +26,5 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:robertkowalski/temperature-stream.git"
-  },
-  "bugs": {
-    "url": "https://github.com/robertkowalski/temperature-stream/issues"
   }
 }

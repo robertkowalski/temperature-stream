@@ -1,13 +1,12 @@
 [![Build Status](https://travis-ci.org/robertkowalski/temperature-stream.png?branch=master)](https://travis-ci.org/robertkowalski/temperature-stream)
-[![Dependency Status](https://gemnasium.com/robertkowalski/temperature-stream.png)](https://gemnasium.com/robertkowalski/temperature-stream)
 
-#temperature-stream
+# temperature-stream
 
 Temperature from a Raspberry Pi GPIO as a stream
 
-##Usage
+## Usage
 
-```javascript
+```js
 var fs = require("fs")
 var tsr = require("temperature-stream")
 
@@ -18,7 +17,7 @@ fs.createReadStream("/sys/bus/w1/devices/10-000802824e58/w1-slave")
 ```
 
 Adding a semicolon to the end of the resulting data:
-```javascript
+```js
 var fs = require("fs")
 var tsr = require("temperature-stream")
 
@@ -28,7 +27,7 @@ fs.createReadStream("/sys/bus/w1/devices/10-000802824e58/w1-slave")
     .pipe(target) // 22750;
 ```
 
-##Input / Output
+## Input / Output
 
 Input:
 ```
