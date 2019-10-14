@@ -8,7 +8,7 @@ const tsr = require(".")
 const rootDir = "/sys/bus/w1/devices/"
 
 const files = fs.readdirSync(rootDir)
-const dir = files.filter((el) => {
+const dir = files.filter((el) => {
   return /^28/.test(el)
 })[0]
 

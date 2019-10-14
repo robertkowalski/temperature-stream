@@ -9,13 +9,21 @@ Supports `DS18B20` sensors.
 ## Usage
 
 ```js
-var fs = require("fs")
-var tsr = require("temperature-stream")
+const path = require("path")
+const fs = require("fs")
 
-var target = fs.createWriteStream(tempdir + "/temp.txt")
-fs.createReadStream("/sys/bus/w1/devices/10-000802824e58/w1-slave")
-    .pipe(tsr())
-    .pipe(target)
+const tsr = require("temperature-stream")
+
+const rootDir = "/sys/bus/w1/devices/"
+
+const files = fs.readdirSync(rootDir)
+const dir = files.filter((el) => {
+  return /^28/.test(el)
+})[0]
+
+fs.createReadStream(`/sys/bus/w1/devices/${dir}/w1_slave`)
+  .pipe(tsr())
+  .pipe(process.stdout)
 ```
 
 Adding a semicolon to the end of the resulting data:
